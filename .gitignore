@@ -1,0 +1,5 @@
+﻿data/
+*.rds
+.Rproj.user
+.Rhistory
+sa_key.json
