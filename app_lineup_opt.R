@@ -1,4 +1,4 @@
-﻿# ============================================================================
+# ============================================================================
 #  app_lineup_opt.R - OFFENSE: best batting order for our 9 vs a given pitcher.
 #  Standalone app; shares data/{hitter_object,pitcher_object,run_values}.rds.
 #  run: shiny::runApp("app_lineup_opt.R")

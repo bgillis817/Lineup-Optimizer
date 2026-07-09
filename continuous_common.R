@@ -45,7 +45,7 @@ leverage_bucket <- function(balls, strikes) {
 # ---- load combined pitch data ---------------------------------------------
 # Source priority: cache > DRIVE_FOLDER > PITCH_RDS > CSV_DIR
 load_pitches <- function() {
-  cache <- Sys.getenv("PITCH_CACHE", "")
+  cache <- Sys.getenv("PITCH_CACHE", "data/pitches_cache.rds")
   dedup_pitches <- function(d) {
     before <- nrow(d)
     if ("PitchUID" %in% names(d)) d <- d %>% distinct(PitchUID, .keep_all = TRUE)
