@@ -1,4 +1,4 @@
-﻿# ============================================================================
+# ============================================================================
 #  app_lineup_opt.R - OFFENSE: best batting order for our 9 vs a given pitcher.
 #  Standalone app; shares data/{hitter_object,pitcher_object,run_values}.rds.
 #  run: shiny::runApp("app_lineup_opt.R")
@@ -10,8 +10,8 @@ source("continuous_common.R")
 source("matchup_kernel_continuous.R")
 source("lineup_sim_continuous.R")
 source("lineup_optimizer.R")
-source("build_batter_response.R"); source("matchup_shape.R"); source("shape_pa.R")
-options(necbl.shape_mode = TRUE)
+SHAPE_OK <- tryCatch({ source("build_batter_response.R"); source("matchup_shape.R")
+  source("shape_pa.R"); TRUE }, error=function(e){ message("shape model unavailable: ", e$message); FALSE })
 km <- load_cont_kernel("data")
 CURRENT_SEASON <- "2026"
 
@@ -46,6 +46,7 @@ ui <- page_navbar(title="NECBL Lineup Optimizer", theme=navy,
       p("Lock a hitter to a slot; the rest optimize around him.", class="text-muted small"),
       hr(),
       sliderInput("innings","Innings", 1, 9, 9),
+      checkboxInput("shape", "Shape-aware matchups (pitch shape + location)", value = FALSE),
       sliderInput("sims","MC sims (for clicked lineup's chart)", 500, 3000, 1000, step=500),
       actionButton("go","Optimize", class="btn-primary w-100")),
     tagList(
@@ -87,7 +88,7 @@ server <- function(input, output, session){
 
   res <- eventReactive(input$go, {
     req(length(input$batters)>=9)
-    options(necbl.shape_mode = TRUE)
+    options(necbl.shape_mode = isTRUE(input$shape) && SHAPE_OK)
     ctx <- list(pid=pid_of(input$opp), season=CURRENT_SEASON, innings=input$innings, sims=input$sims)
     battle <- if (length(input$battle)>=1) input$battle else NULL
     bmax   <- if (!is.null(battle)) as.integer(input$battle_max) else NULL
