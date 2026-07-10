@@ -1,6 +1,6 @@
 # ============================================================================
 #  build_batter_response.R  - STAGE 3 (v2): "how does THIS hitter do against
-#  THIS pitch in THIS spot, in THIS count?"  No global league shrinkage — the
+#  THIS pitch in THIS spot, in THIS count?"  No global league shrinkage Ã¢â‚¬â€ the
 #  estimate is POOLED from neighbors in shape+location space: his own pitches
 #  near the query, plus SIMILAR hitters' pitches near it, distance-weighted.
 #
@@ -8,7 +8,7 @@
 #  PlateLocHeight, PlateLocSide.  Hard filters: same count bucket, same pitcher
 #  handedness, same batter handedness (platoon-correct).
 #
-#  Answers e.g.: "Sinker 0-2, 88 / 12 IVB / 18 HB, down-and-in — his xwOBACON,
+#  Answers e.g.: "Sinker 0-2, 88 / 12 IVB / 18 HB, down-and-in Ã¢â‚¬â€ his xwOBACON,
 #  swing%, chase%, whiff%?"  Verified by that exact query below.
 #
 #  RUN: PITCH_CACHE=data/pitches_cache.rds XS_DIR=../xStatsNECBL Rscript build_batter_response.R
@@ -19,8 +19,7 @@ OUT_DIR <- Sys.getenv("OUT_DIR","data"); dir.create(OUT_DIR, showWarnings=FALSE,
 
 DIMS <- c("RelSpeed","InducedVertBreak","HorzBreak","PlateLocHeight","PlateLocSide")
 
-px <- load_pitches()
-px <- attach_xwobacon(px)
+px <- if (file.exists("data/px_cache.rds")) readRDS("data/px_cache.rds") else attach_xwobacon(load_pitches())
 px <- px %>%
   mutate(across(all_of(DIMS), ~suppressWarnings(as.numeric(.)))) %>%
   filter(if_all(all_of(DIMS), ~!is.na(.)),

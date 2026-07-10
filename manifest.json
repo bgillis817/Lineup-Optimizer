@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.5.0",
+  "metadata": {
+    "appmode": "shiny",
+    "primary_rmd": null,
+    "primary_html": null,
+    "content_category": null,
+    "has_parameters": false
+  },
+  "packages": null,
+  "files": {
+    ".github/workflows/deploy_lineup_sim.yml": {
+      "checksum": "45ee73ec92565a4177e432e57cb41311"
+    },
+    "app.R": {
+      "checksum": "efd57692ab38715a7a1a2048a2ffc6da"
+    },
+    "app_continuous.R": {
+      "checksum": "789f5a102b2c0413bbb6d1958e91454a"
+    },
+    "app_lineup_opt.R": {
+      "checksum": "efd57692ab38715a7a1a2048a2ffc6da"
+    },
+    "build_all.R": {
+      "checksum": "6994946cb66d157c6056e0d553001bf0"
+    },
+    "build_batter_response.R": {
+      "checksum": "4f1874fbc4f39c765bb39fd3b24a0b02"
+    },
+    "build_batter_shape.R": {
+      "checksum": "02a16fc29299ab2b059a9f9b448a8d23"
+    },
+    "build_hitter_object.R": {
+      "checksum": "9a6993085fffc21907c1ebcc90961148"
+    },
+    "build_pitcher_object.R": {
+      "checksum": "1bdd82777ab6efa66ee1ae6bf41ae2f1"
+    },
+    "build_pitcher_shape.R": {
+      "checksum": "2725b36a9e7ca3a22ea3aea047ce9920"
+    },
+    "build_shape_discipline.R": {
+      "checksum": "19ae94ca4c804fcf06d021c9dcbd85bd"
+    },
+    "build_shape_pool.R": {
+      "checksum": "67bfcbda58002c0a3da89a4b3880f42f"
+    },
+    "chk2.R": {
+      "checksum": "569f0b3318548f172341d2c2495eefcf"
+    },
+    "chk3.R": {
+      "checksum": "e65ee86617f946a4a439bfc402da6bb8"
+    },
+    "chk4.R": {
+      "checksum": "05e94e707dd89f61d176ed40d8e6e4d1"
+    },
+    "continuous_common.R": {
+      "checksum": "23c91c694358ed1a6685cc84a0c86bc7"
+    },
+    "data/.gitkeep": {
+      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "data/batter_response_space.rds": {
+      "checksum": "6e865500cecf511de2044dc586568ced"
+    },
+    "data/hitter_object.rds": {
+      "checksum": "95ddfc19ef1b452349fbc95e7ea2ebfb"
+    },
+    "data/pitcher_object.rds": {
+      "checksum": "6bc0993733dd33b44156a63f63e8b74f"
+    },
+    "data/pitcher_shape_object.rds": {
+      "checksum": "27afbf4d4c5df5daade8f0d9fa9d5894"
+    },
+    "data/pitches_cache.rds": {
+      "checksum": "e8a886568a35a34cfece4a3703194370"
+    },
+    "data/run_values.rds": {
+      "checksum": "cd91af379d979c6fc9e1a9dfd7c29c0d"
+    },
+    "data/shape_pool.rds": {
+      "checksum": "675ef4ede1dbbd6f16d1f993b1510999"
+    },
+    "data/shape_space.rds": {
+      "checksum": "7b4e9f6b22fa47527722592a457e2c99"
+    },
+    "deploy_lineup_sim.yml": {
+      "checksum": "45ee73ec92565a4177e432e57cb41311"
+    },
+    "lineup_optimizer.R": {
+      "checksum": "464e9849628263ad1899d1f224efded8"
+    },
+    "lineup_sim_continuous.R": {
+      "checksum": "e2cd0da9de6b9a092b6803747694a1ab"
+    },
+    "matchup_kernel_continuous.R": {
+      "checksum": "bda56957417b91f3c255ab85ffbf391d"
+    },
+    "matchup_shape.R": {
+      "checksum": "6ace802d551dea1e56001534dd04a02e"
+    },
+    "README.md": {
+      "checksum": "42608b8984bf4a590ee0adf8b43c8200"
+    },
+    "shape_pa.R": {
+      "checksum": "e72d0b0a19a73d5b8a83378cff4f260a"
+    },
+    "shape_space.R": {
+      "checksum": "127f502be115290ceb27fbc4352cfc34"
+    }
+  },
+  "users": null
+}
