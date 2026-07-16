@@ -3521,25 +3521,25 @@
       "checksum": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "data/batter_response_space.rds": {
-      "checksum": "bb83856b0efd9aed813b5e4ac2b7b3af"
+      "checksum": "b2deda2b15d89455e2c922b6931d44f2"
     },
     "data/hitter_object.rds": {
-      "checksum": "7597453736d1cd4e045892962dc8320a"
+      "checksum": "f40d915198585f0e41b87cd426048be3"
     },
     "data/pitcher_object.rds": {
-      "checksum": "6bc0993733dd33b44156a63f63e8b74f"
+      "checksum": "3a73f2677184d8aaee2b3653865a2e23"
     },
     "data/pitcher_shape_object.rds": {
       "checksum": "27afbf4d4c5df5daade8f0d9fa9d5894"
     },
     "data/pitches_cache.rds": {
-      "checksum": "c079b7286ebe4dd2e75df3dd227f12ad"
+      "checksum": "3215f752177044899f63fe5197034632"
     },
     "data/px_cache.rds": {
-      "checksum": "91c561e29f551c566c37e1c83bb0b739"
+      "checksum": "ed2bc8930e38bec5a82800d9c0a9eb3d"
     },
     "data/run_values.rds": {
-      "checksum": "cd91af379d979c6fc9e1a9dfd7c29c0d"
+      "checksum": "56b5c022aafe111b6ad470f1cf26464e"
     },
     "data/shape_pool.rds": {
       "checksum": "675ef4ede1dbbd6f16d1f993b1510999"
@@ -3549,15 +3549,6 @@
     },
     "deploy_lineup_sim.yml": {
       "checksum": "45ee73ec92565a4177e432e57cb41311"
-    },
-    "fa.R": {
-      "checksum": "9568466d5020d126c498e28defec91c6"
-    },
-    "h1.R": {
-      "checksum": "2ffe4f5159d303c11005682cc355012c"
-    },
-    "hitters.R": {
-      "checksum": "f9e8efab22d235233497cb80740eaedc"
     },
     "lineup_optimizer.R": {
       "checksum": "464e9849628263ad1899d1f224efded8"
@@ -3571,26 +3562,17 @@
     "matchup_shape.R": {
       "checksum": "6ace802d551dea1e56001534dd04a02e"
     },
-    "nav.R": {
-      "checksum": "257f7b12b538b3c386c6d7c79dc7d9a8"
-    },
     "README.md": {
       "checksum": "42608b8984bf4a590ee0adf8b43c8200"
     },
     "reslim.R": {
       "checksum": "05485e8669040557c321ec86d70867d3"
     },
-    "seelig.R": {
-      "checksum": "c0eb087960a12ebc7ab28753cf45fe9a"
-    },
     "shape_pa.R": {
       "checksum": "e72d0b0a19a73d5b8a83378cff4f260a"
     },
     "shape_space.R": {
       "checksum": "127f502be115290ceb27fbc4352cfc34"
-    },
-    "who.R": {
-      "checksum": "e6b8392ed6f4188b4d582f8834282a58"
     }
   },
   "users": null

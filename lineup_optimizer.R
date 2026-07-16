@@ -76,7 +76,7 @@ sim_order <- function(km, order, pid, season, innings = 9, n_sims = 2500) {
        big=mean(runs>=5), runs=runs, rows=rows)
 }
 
-# cache pa_eval per (batter, tto) once — makes order scoring a pure lookup
+# cache pa_eval per (batter, tto) once â€” makes order scoring a pure lookup
 # If SHAPE_MODE is on, use the shape-aware PA line (pitcher's real cloud x the
 # batter's neighbor-pooled response) instead of the aggregate log5 kernel.
 SHAPE_MODE <- function() isTRUE(getOption("necbl.shape_mode", FALSE))
@@ -171,7 +171,7 @@ expected_runs_c <- function(cache, order, innings = 9) {
       m <- st[[k]]; if (m<=0) next
       parts <- strsplit(k,"|",fixed=TRUE)[[1]]; b <- as.logical(as.integer(parts[1:3])); o <- as.integer(parts[4])
       for (tr in .adv_expected(b, o, line)) {
-        ER <<- ER + m * tr$prob * tr$runs
+        ER <- ER + m * tr$prob * tr$runs
         if (tr$outs >= 3L) { kk <- "0|0|0|0" } else kk <- keyf(tr$b, tr$outs)
         nx[[kk]] <- (if (is.null(nx[[kk]])) 0 else nx[[kk]]) + m * tr$prob
       }
